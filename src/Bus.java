@@ -23,7 +23,7 @@ public class Bus extends Kendaraan {
         if (currentPIndex<=(penumpangTerdaftar-1)) {
             daftarPenumpang[currentPIndex] = new Penumpang(nama, kode);
             currentPIndex++;
-            System.out.println("Penumpang terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
+            System.out.println("Penumpang bus terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
         } else {
             System.out.println("Tidak dapat mendaftarkan penumpang lagi. Penumpang terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
         }
@@ -83,7 +83,7 @@ public class Bus extends Kendaraan {
     private void cekPenumpang(boolean isPassenger, int penumpang) {
         if (isPassenger) {
             System.out.println("Verifikasi berhasil silakan masuk.");
-            penumpang++;
+            this.penumpang++;
         } else {
             System.out.println("Anda tidak terdaftar di perjalanan Bus tersebut");
         }

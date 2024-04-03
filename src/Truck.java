@@ -21,7 +21,7 @@ public class Truck extends Kendaraan {
         if (currentPIndex<=(penumpangTerdaftar-1)) {
             daftarPekerja[currentPIndex] = new Penumpang(nama, kode);
             currentPIndex++;
-            System.out.println("Pekerja terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
+            System.out.println("Pekerja truck terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
         } else {
             System.out.println("Tidak dapat mendaftarkan pekerja lagi. Pekerja terdaftar "+currentPIndex+"/"+penumpangTerdaftar);
         }
