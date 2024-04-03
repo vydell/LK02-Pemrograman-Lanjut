@@ -63,7 +63,7 @@ public class Truck extends Kendaraan {
                     }
                 }
 
-                cekPekerja(isPekerja, id);
+                cekPekerja(isPekerja, penumpang);
 
                 System.out.println("");
             }
@@ -73,9 +73,10 @@ public class Truck extends Kendaraan {
     }
 
     public void getInfo() {
-        System.out.println("Berikut informasi tentang truck tersebut: ");
+        System.out.println("Berikut informasi tentang truck tersebut");
+        System.out.println("Plat nomor truck: "+platNomor);
         System.out.println("Nama perusahan: "+namaPerusahaan);
-        System.out.println("Jumlah pekerja: "+currentPIndex);
+        System.out.println("Jumlah pekerja yang dapat didaftar: "+penumpangTerdaftar);
         System.out.println("Maksimal pekerja pada bidang logistik: "+penumpangTerdaftar);
         System.out.println("Load yang diangkut saat ini "+beratSekarang+" kg per "+maxLoadKg+" kg");
         System.out.println("Kapasitas yang digunakan saat ini "+volumeSekarang+" m2 per "+capacity+" m2");
@@ -97,7 +98,7 @@ public class Truck extends Kendaraan {
     private void cekPekerja(boolean isPekerja, int penumpang) {
         if (isPekerja) {
             System.out.println("Silakan masuk.");
-            penumpang++;
+            this.penumpang++;
         } else {
             System.out.println("Anda tidak terdaftar di truck perusahaan tersebut");
         }

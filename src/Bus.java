@@ -70,6 +70,7 @@ public class Bus extends Kendaraan {
 
     public void getInfo() {
         System.out.println("Berikut informasi tentang bus "+nama+" dengan jurusan "+jurusanBus);
+        System.out.println("Plat nomor bus: "+platNomor);
         System.out.println("Kapasitas bus: "+maxPenumpang+" penumpang");
         System.out.println("Harga tiket bus: Rp. "+hargaTiket);
         System.out.println("Sopir bus: "+driver.getNama());
@@ -77,7 +78,7 @@ public class Bus extends Kendaraan {
         if (currentDIndex!=destinasi.length) {
             System.out.println("Destinasi berikutnya: "+destinasi[currentDIndex+1]);
         }
-        System.out.println("Jumlah penumpang terdaftar: "+penumpangTerdaftar);
+        System.out.println("Jumlah penumpang yang dapat didaftar: "+penumpangTerdaftar);
     }
 
     private void cekPenumpang(boolean isPassenger, int penumpang) {
